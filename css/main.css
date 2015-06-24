@@ -1,0 +1,255 @@
+body {
+  background-color: #330844;
+}
+
+/* splash */
+
+#page-splash {
+  background-image: url("../img/splash-bg.jpg"); 
+  background-size: cover;
+  text-align: center;
+}
+
+#splash-coa {
+  width: 200px;
+  margin-bottom: 50px;
+}
+
+.mark {
+  font-variant: small-caps;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#splash-plp {
+  color: #ffffff;
+  font-size: 300%;
+}
+
+#splash-chapter {
+  color: #cccccc;
+  font-size: 150%;
+}
+
+#splash-down {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+}
+
+#splash-down a {
+  background: 0 !important;
+  border: 0 !important;
+  padding: 0 !important;
+  outline: 0 none;
+  font-size: 500%;
+  color: #ddcc11;
+}
+
+/* sidebar */
+
+#sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  z-index: 10;
+  background-color: #330844;
+}
+
+#sidebar.fixed {
+  position: fixed;
+}
+
+#sidebar-header {
+  padding: 12px 16px;
+  width: 200px;
+  height: 64px;
+  background-color: #661d88;
+  display: block;
+}
+
+#sidebar-entries {
+  list-style-type: none;
+  margin-top: 0px;
+  padding: 0;
+}
+
+#sidebar-entries > li {
+  font-variant: small-caps;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  padding: 5px 0 5px 25px;
+  width: 100%;
+  font-size: 160%;
+}
+
+#sidebar-entries > li.highlighted {
+  font-weight: bold;
+  color: black;
+  background-color: #ffdd18;
+}
+
+#sidebar-entries > li > .sidebar-submenu {
+  display: none;
+}
+
+#sidebar-entries > li.highlighted > .sidebar-submenu {
+  display: block;
+}
+
+.sidebar-submenu {
+  list-style-type: none;
+  margin-top: 0px;
+  padding-left: 25px;
+}
+
+.selected::before {
+  content: "\f0da  ";
+  font-family: "Icons";
+}
+
+/* section content */
+
+.page {
+  padding-left: 200px;
+}
+
+.page-container {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  overflow: auto;
+}
+
+.top-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 500px;
+  margin: 30px 5% 0 0;
+}
+
+.top-left {
+  position: absolute;
+  top: 0;
+  max-width: 500px;
+  margin: 30px 0 0 5%;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  max-width: 500px;
+  margin: 0 5% 30px 0;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 0;
+  max-width: 500px;
+  margin: 0 0 30px 5%;
+}
+
+.center-box {
+  margin: 10% auto 0 auto;
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+  -webkit-column-gap: 40px;
+  -moz-column-gap: 40px;
+  column-gap: 40px;
+  max-width: 900px;
+}
+
+.content {
+  padding: 20px 40px;
+}
+
+.content.dark {
+  background-color: rgba(10, 10, 10, 0.90);
+}
+
+.content h1 {
+  font-variant: small-caps;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20pt;
+  -webkit-column-span: all;
+  -moz-column-span: all;
+  column-span: all;
+}
+
+.content p, ul, li, a {
+  font-size: 11pt;
+  font-family: "Helvetica Neue", arial;
+  line-height: 150%;
+}
+
+.content.dark h1 {
+  color: #ddcc11;
+}
+
+.content.dark p, ul, li, a {
+  color: white;
+}
+
+.content.light {
+  background-color: rgba(245, 245, 245, 0.90);
+}
+
+.content.light h1 {
+  color: #661d88;
+}
+
+.content.light p, ul, li, a {
+  color: black;
+}
+
+/* page specific */
+
+#page-about {
+  background-image: url("../img/placeholders/5.jpg"); 
+}
+
+#location-overlay {
+  background:transparent; 
+  position: absolute; 
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+#page-rush {
+  background-image: url("../img/placeholders/1.jpg"); 
+}
+
+#page-rush-schedule {
+  background-image: url("../img/placeholders/2.jpg"); 
+}
+
+#page-house {
+  background-image: url("../img/placeholders/4.jpg"); 
+}
+
+#page-brothers {
+  background-image: url("../img/placeholders/3.jpg"); 
+}
+
+#page-brothers-seniors {
+  background-color: #330844;
+}
+
+#page-brothers-juniors {
+  background-color: #ffdd18;
+}
+
+#page-brothers-sophomores {
+  background-color: #330844;
+}
+
+#page-brothers-graduates {
+  background-color: #ffdd18;
+}
