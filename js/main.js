@@ -1,0 +1,185 @@
+'use strict'
+
+var pages = [
+  { name: 'splash', subpages: [] },
+  { name: 'about', subpages: [] },
+  { name: 'location', subpages: [] },
+  { name: 'rush', subpages: [] },
+  { name: 'rush-schedule', subpages: [] },
+  { name: 'house',  subpages: [] },
+  { name: 'brothers',  subpages: ['seniors', 'juniors', 'sophomores', 'graduates'] },
+  { name: 'alumni',  subpages: ['donate'] },
+  { name: 'contact', subpages: [] }
+];
+
+var allPages;
+var parentMap;
+
+function initializePages() {
+  allPages = [];
+  parentMap = [];
+  for(var i = 0; i < pages.length; i++) {
+    var parent = allPages.length;
+    parentMap[allPages.length] = parent;
+    allPages.push(pages[i].name);
+    for(var j = 0; j < pages[i].subpages.length; j++) {
+      parentMap[allPages.length] = parent;
+      allPages.push(pages[i].name + "-" + pages[i].subpages[j]);
+    }
+  }
+};
+
+initializePages();
+
+// prevent scrolling to different places concurrently
+var scrollLock = null;
+$(document).ready(function() {
+  $('#fullpage').fullpage({
+      afterLoad: afterLoad,
+      onLeave: onLeave,
+      anchors: allPages,
+      slidesNavigation: true,
+      slidesNavPosition: 'bottom',
+      animateAnchor: false,
+      responsiveWidth: 1080,
+      responsiveHeight: 600
+  });
+
+  createHiddenNavbar();
+
+  for(var i = 0; i < allPages.length; i++) {
+    var page = allPages[i];
+    $('.navbar-' + page).click((function(j) {
+      if (scrollLock == null) {
+        if ($(window).width() <= 1080) {
+          // performance optimization for mobile
+          $.fn.fullpage.silentMoveTo(j+1);
+        } else {
+          $.fn.fullpage.moveTo(j+1);
+        }
+        toggleHiddenNavbar(true);
+      }
+    }).bind(this, i));
+  }
+
+  $('.clickable-face img').on('mouseover', function() {
+    /* hu
+    $(this).attr('data-orig-src', $(this).attr('src'));
+    $(this).attr('src', 'img/faces/martin_ma.jpg');
+    */
+    $(this).css('filter', 'saturate(150%)');
+  }).on('mouseout', function() {
+    /* ding!
+    $(this).attr('src', $(this).attr('data-orig-src'));
+    */
+    $(this).css('filter', '');
+  });
+});
+
+function afterLoad(anchorLink, index) {
+  index--;
+
+  navbarLoad(index);
+  highlightLoad(index);
+  scrollLock = null;
+}
+
+//var isSilent = false;
+function onLeave(index, nextIndex, direction) {
+  index--;
+  nextIndex--;
+  /*
+  if (!isSilent && Math.abs(index - nextIndex) > 1) {
+    isSilent = true;
+    $.fn.fullpage.silentMoveTo(allPages[nextIndex]);
+    return false;
+  }
+  isSilent = false;
+  */
+
+  if (scrollLock != null) {
+    return false;
+  }
+  scrollLock = nextIndex;
+
+  navbarTransition(index, nextIndex);
+  highlightLoad(nextIndex);
+}
+
+var hiddenNavbarShowing = false;
+function createHiddenNavbar() {
+  var bar = $('#navbar').clone();
+  bar.attr('id', 'hidden-navbar');
+  bar.css('display', 'none');
+  bar.appendTo('body');
+
+  $('#navbar-toggle').click(function() {
+    toggleHiddenNavbar();
+  });
+  $('#navbar-dimmer').click(function() {
+    toggleHiddenNavbar(true);
+  });
+}
+
+function toggleHiddenNavbar(hideOnly) {
+  if (hiddenNavbarShowing) {
+    $('#hidden-navbar').css('display', 'none');
+    $('#navbar-dimmer').css('display', 'none');
+    $('#navbar-toggle-button-closed').css('display', 'inline');
+    $('#navbar-toggle-button-open').css('display', 'none');
+  } else {
+    $('#hidden-navbar').css('display', 'block');
+    $('#navbar-dimmer').css('display', 'block');
+    $('#navbar-toggle-button-open').css('display', 'inline');
+    $('#navbar-toggle-button-closed').css('display', 'none');
+  }
+  hiddenNavbarShowing = !hiddenNavbarShowing;
+}
+
+
+function navbarLoad(index) {
+  if(index == 0) {
+    $('#navbar').css('display', 'none');
+  } else {
+    $('body').append($('#navbar'));
+    $('#navbar').css('height', '100%');
+    $('#navbar').css('display', 'initial');
+  }
+}
+
+function navbarTransition(index, nextIndex) {
+  // 0 -> + : fixed to next section
+  // + -> + : fixed to window
+  // + -> 0 : fixed to current section
+  // height is tricky since Firefox
+  if(index == 0) {
+    $('#page-' + allPages[nextIndex]).parent().append($('#navbar'));
+    $('#navbar').css('height', $('#page-' + allPages[nextIndex]).height());
+  } else if(nextIndex == 0) {
+    $('#page-' + allPages[index]).parent().append($('#navbar'));
+    $('#navbar').css('height', $('#page-' + allPages[index]).height());
+  } else {
+    $('body').append($('#navbar'));
+    $('#navbar').css('height', '100%');
+  }
+
+  if(nextIndex != 0) {
+    $('#navbar').css({display: 'initial'});
+  }
+}
+
+function highlightLoad(index) {
+  $(".navbar-entries li").removeClass("highlighted").removeClass("selected");
+  $(".navbar-submenu li").removeClass("highlighted").removeClass("selected");
+  if(index == 0) {
+    return;
+  }
+
+  var parent = parentMap[index];
+  var parentSelector = $(".navbar-" + allPages[parent]).parent().addClass("highlighted");
+  if(index == parent) {
+    parentSelector.addClass("selected");
+  } else {
+    $(".navbar-" + allPages[index]).addClass("selected");
+  }
+}
