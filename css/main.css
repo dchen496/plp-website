@@ -106,10 +106,18 @@ body {
   padding-left: 25px;
 }
 
-.selected::before {
+.selected:before {
   content: "\f0da  ";
-  font-family: "Icons";
+  font-family: "Icons", "FontAwesome";
 }
+
+/* wtf? since safari's :before with non-BMP unicode seems to all sorts of broken */
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) { @media 
+{
+  .selected:before {
+    content: "> ";
+  }
+}}
 
 /* section content */
 
@@ -257,6 +265,8 @@ body {
   height: 74%;
   margin: auto;
   position: absolute;
+  /* for fitting */
+  /*background-color: pink;*/
   top:6%;
   bottom:0;
   left:0;
@@ -286,6 +296,7 @@ body {
   position: absolute;
   bottom: 0;
   z-index: 10;
+  padding: 2px 0;
 }
 
 .brother-page.purple {
@@ -306,6 +317,12 @@ body {
   color: black;
 }
 
+.clickable-face-name {
+  background-color: rgba(30, 30, 30, 0.50);
+  color: white;
+}
+
+/*
 .brother-page.purple .clickable-face-name {
   background-color: rgba(245, 245, 245, 0.90);
   color: black;
@@ -315,6 +332,7 @@ body {
   background-color: rgba(10, 10, 10, 0.90);
   color: white;
 }
+/*
 
 /*ugh*/ 
 #page-brothers-seniors .clickable-face {
@@ -336,7 +354,7 @@ body {
 }
 
 #page-brothers-sophomores .clickable-face {
-  width: 20%;
+  width: 21%;
   padding: .4%;
 }
 
@@ -345,7 +363,7 @@ body {
 }
 
 #page-brothers-graduates .clickable-face {
-  width: 16.5%;
+  width: 20%;
   padding: .4%;
 }
 
