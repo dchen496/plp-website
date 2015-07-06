@@ -122,6 +122,7 @@ body {
   height: 100%;
   background-size: cover;
   overflow: auto;
+  position: relative;
 }
 
 .top-right {
@@ -184,7 +185,7 @@ body {
 
 .content p, ul, li, a {
   font-size: 11pt;
-  font-family: "Helvetica Neue", arial;
+  font-family: 'Helvetica Neue', arial, sans-serif;
   line-height: 150%;
 }
 
@@ -238,24 +239,6 @@ body {
   background-image: url("../img/placeholders/3.jpg"); 
 }
 
-.brother-page.purple {
-  //background-color: #220633;
-  background-image: url("../img/splash-bg.jpg"); 
-  background-size: cover;
-}
-
-.brother-page.purple h1 {
-  color: #ffdd18;
-}
-
-.brother-page.yellow {
-  background-color: #ffdd18;
-}
-
-.brother-page.yellow h1 {
-  color: #330844;
-}
-
 .brother-page h1 {
   padding-top: 20px;
   font-size: 40pt;
@@ -270,7 +253,14 @@ body {
 }
 
 .face-container {
+  width: 80%; 
+  height: 74%;
   margin: auto;
+  position: absolute;
+  top:6%;
+  bottom:0;
+  left:0;
+  right:0;
 }
 
 .clickable-face {
@@ -290,18 +280,45 @@ body {
 }
 
 .clickable-face-name {
+  font-family: 'Helvetica Neue', arial, sans-serif;
   font-variant: small-caps;
-  font-family: 'Montserrat', sans-serif;
   width: 100%;
-  background-color: rgba(245, 245, 245, 0.90);
-  color: black;
   position: absolute;
   bottom: 0;
   z-index: 10;
 }
 
+.brother-page.purple {
+  /*background-color: #220633;*/
+  background-image: url("../img/splash-bg.jpg"); 
+  background-size: cover;
+}
+
+.brother-page.purple h1 {
+  color: white;
+}
+
+.brother-page.yellow {
+  background-color: #ffdd18;
+}
+
+.brother-page.yellow h1 {
+  color: black;
+}
+
+.brother-page.purple .clickable-face-name {
+  background-color: rgba(245, 245, 245, 0.90);
+  color: black;
+}
+
+.brother-page.yellow .clickable-face-name {
+  background-color: rgba(10, 10, 10, 0.90);
+  color: white;
+}
+
+/*ugh*/ 
 #page-brothers-seniors .clickable-face {
-  width: 25%;
+  width: 22%;
   padding: .5%;
 }
 
@@ -310,7 +327,7 @@ body {
 }
 
 #page-brothers-juniors .clickable-face {
-  width: 17%;
+  width: 14.5%;
   padding: .34%;
 }
 
@@ -328,7 +345,7 @@ body {
 }
 
 #page-brothers-graduates .clickable-face {
-  width: 17%;
+  width: 16.5%;
   padding: .4%;
 }
 
