@@ -238,18 +238,100 @@ body {
   background-image: url("../img/placeholders/3.jpg"); 
 }
 
-#page-brothers-seniors {
-  background-color: #330844;
+.brother-page.purple {
+  //background-color: #220633;
+  background-image: url("../img/splash-bg.jpg"); 
+  background-size: cover;
 }
 
-#page-brothers-juniors {
+.brother-page.purple h1 {
+  color: #ffdd18;
+}
+
+.brother-page.yellow {
   background-color: #ffdd18;
 }
 
-#page-brothers-sophomores {
-  background-color: #330844;
+.brother-page.yellow h1 {
+  color: #330844;
 }
 
-#page-brothers-graduates {
-  background-color: #ffdd18;
+.brother-page h1 {
+  padding-top: 20px;
+  font-size: 40pt;
+  font-variant: small-caps;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.brother-page {
+  padding: 0 20%; 
+  text-align: center;
+  font-size: 0; // hack to remove empty space between rows
+}
+
+.face-container {
+  margin: auto;
+}
+
+.clickable-face {
+  display: inline-block;
+  font-size: 0;
+}
+
+.clickable-face > div {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.clickable-face img {
+  width: 100%;
+  height: auto;
+}
+
+.clickable-face-name {
+  font-variant: small-caps;
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  background-color: rgba(245, 245, 245, 0.90);
+  color: black;
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+}
+
+#page-brothers-seniors .clickable-face {
+  width: 25%;
+  padding: .5%;
+}
+
+#page-brothers-seniors .clickable-face-name {
+  font-size: 16pt;
+}
+
+#page-brothers-juniors .clickable-face {
+  width: 17%;
+  padding: .34%;
+}
+
+#page-brothers-juniors .clickable-face-name {
+  font-size: 12pt;
+}
+
+#page-brothers-sophomores .clickable-face {
+  width: 20%;
+  padding: .4%;
+}
+
+#page-brothers-sophomores .clickable-face-name {
+  font-size: 13pt;
+}
+
+#page-brothers-graduates .clickable-face {
+  width: 17%;
+  padding: .4%;
+}
+
+#page-brothers-graduates .clickable-face-name {
+  font-size: 12pt;
 }
