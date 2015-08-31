@@ -211,7 +211,17 @@ li.selected, .selected > span {
 .brother-page {
   padding: 0 20%;
   text-align: center;
-  font-size: 0; // hack to remove empty space between rows
+  font-size: 0; /* hack to remove empty space between rows */
+}
+
+.brother-page.purple {
+  background-color: #220630;
+  background-image: repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(255,255,255,.066) 5px, rgba(255,255,255,.066) 10px);
+}
+
+.brother-page.yellow {
+  background-color: #ffdd18;
+  background-image: repeating-linear-gradient(-45deg, transparent, transparent 5px, rgba(0,0,0,.066) 5px, rgba(0,0,0,.066) 10px);
 }
 
 .face-container {
