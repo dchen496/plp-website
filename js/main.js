@@ -42,7 +42,7 @@ $(document).ready(function() {
       slidesNavPosition: 'bottom',
       animateAnchor: false,
       responsiveWidth: 1080,
-      responsiveHeight: 600
+      responsiveHeight: 580
   });
 
   createHiddenNavbar();
