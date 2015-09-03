@@ -74,6 +74,10 @@ $(document).ready(function() {
     */
     $(this).css('filter', '');
   });
+
+  $('#page-splash').click(function() {
+    window.location = '#about';
+  });
 });
 
 function afterLoad(anchorLink, index) {
@@ -84,18 +88,9 @@ function afterLoad(anchorLink, index) {
   scrollLock = null;
 }
 
-//var isSilent = false;
 function onLeave(index, nextIndex, direction) {
   index--;
   nextIndex--;
-  /*
-  if (!isSilent && Math.abs(index - nextIndex) > 1) {
-    isSilent = true;
-    $.fn.fullpage.silentMoveTo(allPages[nextIndex]);
-    return false;
-  }
-  isSilent = false;
-  */
 
   if (scrollLock != null) {
     return false;
