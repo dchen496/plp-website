@@ -86,6 +86,14 @@ body {
   font-size: 16pt;
 }
 
+.navbar-entries > li, .navbar-submenu > li {
+  cursor: pointer;
+}
+
+.navbar-entries > li > div {
+  width: 100%;
+}
+
 .navbar-entries > li.highlighted {
   color: black;
   background-color: #ffdd18;
@@ -110,7 +118,7 @@ body {
   font-weight: normal;
 }
 
-li.selected, .selected > span {
+li.selected, .selected > div {
   color: #661d88;
   font-weight: bold;
 }
