@@ -1,0 +1,9 @@
+#!/bin/bash
+
+KERBEROS=$1
+if [ -z $KERBEROS ]; then
+  echo "Usage: $0 <kerberos>"
+  exit 1
+fi
+
+ssh ${KERBEROS}@athena.dialup.mit.edu 'ssh plp@scripts "cd m && git pull"'
