@@ -285,6 +285,7 @@ li.selected, .selected > div {
   font-size: 16pt;
   color: white;
   font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
 }
 
 #rush-phone {
