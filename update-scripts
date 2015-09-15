@@ -6,4 +6,5 @@ if [ -z $KERBEROS ]; then
   exit 1
 fi
 
-ssh ${KERBEROS}@athena.dialup.mit.edu 'ssh plp@scripts "cd m && git pull"'
+# try to avoid merge conflicts even if we force pushed master
+ssh ${KERBEROS}@athena.dialup.mit.edu 'ssh plp@scripts "cd m && git fetch origin master && git reset --hard FETCH_HEAD && git clean -df"'
