@@ -5,7 +5,7 @@ var pages = [
   { name: 'about', subpages: [] },
   { name: 'location', subpages: [] },
   { name: 'rush', subpages: [] },
-  { name: 'rush-schedule', subpages: [] },
+//  { name: 'rush-schedule', subpages: [] },
   { name: 'house',  subpages: [] },
   { name: 'brothers',  subpages: ['seniors', 'juniors', 'sophomores', 'graduates'] },
   { name: 'alumni',  subpages: ['donate'] },
