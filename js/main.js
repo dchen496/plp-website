@@ -51,27 +51,15 @@ $(document).ready(function() {
     var page = allPages[i];
     $('.navbar-' + page).click((function(j) {
       if (scrollLock == null) {
-        if ($(window).width() <= 1080) {
-          // performance optimization for mobile
-          $.fn.fullpage.silentMoveTo(j+1);
-        } else {
-          $.fn.fullpage.moveTo(j+1);
-        }
+        $.fn.fullpage.silentMoveTo(j+1);
         toggleHiddenNavbar(true);
       }
     }).bind(this, i));
   }
 
   $('.clickable-face img').on('mouseover', function() {
-    /* hu
-    $(this).attr('data-orig-src', $(this).attr('src'));
-    $(this).attr('src', 'img/faces/martin_ma.jpg');
-    */
     $(this).css('filter', 'saturate(150%)');
   }).on('mouseout', function() {
-    /* ding!
-    $(this).attr('src', $(this).attr('data-orig-src'));
-    */
     $(this).css('filter', '');
   });
 
