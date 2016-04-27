@@ -88,6 +88,11 @@ body {
   background-position: center;
 }
 
+#page-brothers-the-brotherhood {
+  background-image: url("../img/brotherhood-bg.png");
+  background-position: center;
+}
+
 /*ugh*/
 #page-brothers-seniors .clickable-face {
   width: 22%;

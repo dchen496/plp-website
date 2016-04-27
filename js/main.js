@@ -4,11 +4,11 @@ var pages = [
   { name: 'splash', subpages: [] },
   { name: 'about', subpages: [] },
   { name: 'location', subpages: [] },
-  { name: 'rush', subpages: [] },
 //  { name: 'rush-schedule', subpages: [] },
   { name: 'house',  subpages: [] },
-  { name: 'brothers',  subpages: ['seniors', 'juniors', 'sophomores', 'graduates'] },
-  { name: 'alumni',  subpages: ['donate'] },
+  { name: 'brothers',  subpages: ['the-brotherhood', 'seniors', 'juniors', 'sophomores', 'graduates'] },
+  { name: 'rush', subpages: [] },
+//  { name: 'alumni',  subpages: [] },
   { name: 'contact', subpages: [] }
 ];
 
@@ -122,7 +122,7 @@ function toggleHiddenNavbar(hideOnly) {
 
 function navbarLoad(index) {
   if(index == 0) {
-    $('#navbar').css('display', 'none');
+   // $('#navbar').css('display', 'none');
   } else {
     $('body').append($('#navbar'));
     $('#navbar').css('height', '100%');
@@ -135,16 +135,17 @@ function navbarTransition(index, nextIndex) {
   // + -> + : fixed to window
   // + -> 0 : fixed to current section
   // height is tricky since Firefox
-  if(index == 0) {
+  /*if(index == 0) {
     $('#page-' + allPages[nextIndex]).parent().append($('#navbar'));
     $('#navbar').css('height', $('#page-' + allPages[nextIndex]).height());
   } else if(nextIndex == 0) {
     $('#page-' + allPages[index]).parent().append($('#navbar'));
     $('#navbar').css('height', $('#page-' + allPages[index]).height());
   } else {
+  */
     $('body').append($('#navbar'));
     $('#navbar').css('height', '100%');
-  }
+  //}
 
   if(nextIndex != 0) {
     $('#navbar').css({display: 'initial'});

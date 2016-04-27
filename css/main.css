@@ -348,3 +348,42 @@ li.selected, .selected > div {
   font-size: 8pt;
   color: white;
 }
+
+.alumni-decade-bar {
+  position: absolute;
+  top: 0;
+  width: 200px;
+  z-index: 10;
+  height: 100%;
+  background-color: gray;
+}
+
+.alumni-year-bar {
+  position: absolute;
+  top: 0;
+  left: 200px;
+  width: 200px;
+  z-index: 10;
+  height: 100%;
+  background-color: gray;
+}
+
+.alumni-info {
+  width: 900px;
+  max-width: 900px !important;
+  height: 500px;
+}
+
+.alumni-list {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+  -webkit-column-gap: 40px;
+  -moz-column-gap: 40px;
+  column-gap: 40px;
+}
+
+.alumni-info li {
+  font-size: 150%;
+  color: #661d88;
+}
