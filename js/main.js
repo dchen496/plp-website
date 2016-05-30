@@ -8,7 +8,7 @@ var pages = [
   { name: 'house',  subpages: [] },
   { name: 'brothers',  subpages: ['the-brotherhood', 'seniors', 'juniors', 'sophomores', 'graduates'] },
   { name: 'rush', subpages: [] },
-  { name: 'alumni',  subpages: [] },
+//  { name: 'alumni',  subpages: [] },
   { name: 'contact', subpages: [] }
 ];
 
