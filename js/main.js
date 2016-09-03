@@ -4,10 +4,9 @@ var pages = [
   { name: 'splash', subpages: [] },
   { name: 'about', subpages: [] },
   { name: 'location', subpages: [] },
-//  { name: 'rush-schedule', subpages: [] },
+  { name: 'rush', subpages: ['schedule'] },
   { name: 'house',  subpages: [] },
   { name: 'brothers',  subpages: ['the-brotherhood', 'seniors', 'juniors', 'sophomores', 'graduates'] },
-  { name: 'rush', subpages: [] },
 //  { name: 'alumni',  subpages: [] },
   { name: 'contact', subpages: [] }
 ];
