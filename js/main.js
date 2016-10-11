@@ -7,7 +7,7 @@ var pages = [
   { name: 'rush', subpages: ['schedule'] },
   { name: 'house',  subpages: [] },
   { name: 'brothers',  subpages: ['the-brotherhood', 'seniors', 'juniors', 'sophomores', 'graduates'] },
-//  { name: 'alumni',  subpages: [] },
+  { name: 'alumni',  subpages: [] },
   { name: 'contact', subpages: [] }
 ];
 
@@ -165,4 +165,52 @@ function highlightLoad(index) {
   } else {
     $(".navbar-" + allPages[index]).addClass("selected");
   }
+}
+
+function readTextFile(file) {
+    var rawFile = new XMLHttpRequest();
+    var response = "a"
+    rawFile.open("GET", file, false);
+    rawFile.onreadystatechange = function () {
+        if(rawFile.readyState === 4) {
+            if(rawFile.status === 200 || rawFile.status == 0) {
+		response = rawFile.responseText
+            }
+        }
+    }
+    rawFile.send(null);
+
+    return response
+}
+
+function setDecade(year, lengthOfADecade=10) {
+    $(".jimothy").html("<div class=\"alumni-year-bar content dark\"><h1>&nbsp;</h1><h2>Select a year</h2><div class=\"joel\"></div></div>")
+    
+    var innerHTML = ""
+    for (var i = year; i < year+lengthOfADecade; i++) {
+	innerHTML += "<a onclick=\"setAlumni(" + i + ")\" href=\"#alumni\"><h2><div>" + i + "</div></h2></a><br>"
+    }
+    $(".joel").html(innerHTML)
+}
+	
+
+function getAlumniNames(year) {
+    var alumni_str = readTextFile("txt/alumni.txt")
+
+    alumni_str = alumni_str.slice(alumni_str.indexOf("Class of " + year) + 14)
+    alumni_str = alumni_str.slice(0, alumni_str.indexOf("Class of")-2)
+
+    return alumni_str.split("\n")
+}
+
+function setAlumni(year) {
+    $(".john").html("<div class=\"alumni-info bottom-right content light\">\n<div class=\"alumni-year\">\n</div>\n<ul class=\"alumni-list\">\n</ul>\n</div>")
+    $(".alumni-year").html("<h1>Class of " + year + "</h1>")
+    
+    var alumniNames = getAlumniNames(year)
+    var innerHTML = ""
+    for (var i = 0; i < alumniNames.length; i++) {
+	innerHTML += "<li>" + alumniNames[i] + "</li>"
+    }
+    $(".alumni-list").html(innerHTML)
 }
