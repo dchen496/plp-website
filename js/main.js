@@ -183,7 +183,7 @@ function readTextFile(file) {
     return response
 }
 
-function setDecade(year, lengthOfADecade=10) {
+function setDecade(year, lengthOfADecade) {
     $(".jimothy").html("<div class=\"alumni-year-bar content dark\"><h1>&nbsp;</h1><h2>Select a year</h2><div class=\"joel\"></div></div>")
     
     var innerHTML = ""
