@@ -78,7 +78,7 @@
       <div class="section page">
         <div id="page-about" class="page-container">
           <div class="bottom-right content light">
-            <h1>Not Four Years, But a Lifetime</h1>
+            <h1>For All Men, Of All Creeds</h1>
             <p>
               The Massachusetts Theta chapter of Pi Lambda Phi was founded in
               1897 and continues to hold a strong presence at the Institute
@@ -560,31 +560,20 @@
 
       <div class="section page">
         <div id="page-alumni" class="page-container">
-          <div class="alumni-decade-bar content light">
-            <h1>Alumni</h1>
-            <h2>Select a decade</h2>
-            <a onclick="setDecade(1950, 10)" href="#alumni"><h2><div>1950s</div></h2></a><br>
-            <a onclick="setDecade(1960, 10)" href="#alumni"><h2><div>1960s</div></h2></a><br>
-            <a onclick="setDecade(1970, 10)" href="#alumni"><h2><div>1970s</div></h2></a><br>
-            <a onclick="setDecade(1980, 10)" href="#alumni"><h2><div>1980s</div></h2></a><br>
-            <a onclick="setDecade(1990, 10)" href="#alumni"><h2><div>1990s</div></h2></a><br>
-            <a onclick="setDecade(2000, 10)" href="#alumni"><h2><div>2000s</div></h2></a><br>
-            <a onclick="setDecade(2010, 7)" href="#alumni"><h2><div>2010s</div></h2></a>
-          </div>
-	  <div class="jimothy">
-            <!-- <div class="alumni-year-bar content dark"> -->
-            <!--   <h1>&nbsp;</h1> -->
-            <!--   <h2>Select a year</h2> -->
-	    <!--   <div class="joel"></div> -->
-            <!-- </div> -->
-	  </div>
-	  <div class="john">
-            <!-- <div class="alumni-info bottom-right content light"> -->
-            <!--   <div class="alumni-year"> -->
-	    <!--   </div> -->
-            <!--   <ul class="alumni-list"> -->
-            <!--   </ul> -->
-            <!-- </div> -->
+	  <div class="center-box content light">
+	    <h1>Not Four Years, But a Lifetime</h1>
+	    <p>
+	      Welcome Alumni! Use the dropdown below to select a class year.
+	    </p>
+	    <div class="ui fluid search selection dropdown">
+	      <input name="country" type="hidden">
+	      <i class="dropdown icon"></i>
+	      <div class="default text">Select Graduation Year</div>
+	      <div class="menu" id="alumni-dropdown" onload="initializeAlumni()">
+	      </div>
+	    </div>
+	    <ul class="alumni-list">
+	    </ul>
 	  </div>
         </div>
       </div>

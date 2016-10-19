@@ -65,6 +65,24 @@ $(document).ready(function() {
   $('#page-splash').click(function() {
     window.location = '#about';
   });
+
+  
+    $(".ui.dropdown").dropdown({
+	onChange: function (year) {
+	    setAlumni(year)
+	}
+    });
+    initializeAlumni();
+
+  $('#alumni-dropdown').on('mouseover', function() {
+      if (scrollLock == null) {
+	  scrollLock = -1;
+      }
+  }).on('mouseout', function() {
+      if (scrollLock == -1) {
+	  scrollLock = null
+      }
+  });
 });
 
 function afterLoad(anchorLink, index) {
@@ -204,9 +222,6 @@ function getAlumniNames(year) {
 }
 
 function setAlumni(year) {
-    $(".john").html("<div class=\"alumni-info bottom-right content light\">\n<div class=\"alumni-year\">\n</div>\n<ul class=\"alumni-list\">\n</ul>\n</div>")
-    $(".alumni-year").html("<h1>Class of " + year + "</h1>")
-    
     var alumniNames = getAlumniNames(year)
     var innerHTML = ""
     for (var i = 0; i < alumniNames.length; i++) {
@@ -214,3 +229,13 @@ function setAlumni(year) {
     }
     $(".alumni-list").html(innerHTML)
 }
+
+function initializeAlumni() {
+    var innerHTML = ""
+    for (var year = 1960; year <= 2016; year++) {
+	innerHTML += "<div class=\"item\" data-value=\"" + year + "\">Class of " + year + "</div>"
+    }
+    $("#alumni-dropdown").html(innerHTML)
+}
+
+initializeAlumni();
