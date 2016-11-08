@@ -232,7 +232,7 @@ function setAlumni(year) {
 
 function initializeAlumni() {
     var innerHTML = ""
-    for (var year = 1960; year <= 2016; year++) {
+    for (var year = 1950; year <= 2016; year++) {
 	innerHTML += "<div class=\"item\" data-value=\"" + year + "\">Class of " + year + "</div>"
     }
     $("#alumni-dropdown").html(innerHTML)
