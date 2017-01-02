@@ -6,7 +6,7 @@ var pages = [
   { name: 'location', subpages: [] },
   { name: 'rush', subpages: ['schedule'] },
   { name: 'house',  subpages: [] },
-  { name: 'brothers',  subpages: ['the-brotherhood', 'seniors', 'juniors', 'sophomores', 'graduates'] },
+  { name: 'brothers',  subpages: ['the-brotherhood', 'seniors', 'juniors', 'sophomores', 'freshmen', 'graduates'] },
   { name: 'alumni',  subpages: [] },
   { name: 'contact', subpages: [] }
 ];
@@ -232,7 +232,7 @@ function setAlumni(year) {
 
 function initializeAlumni() {
     var innerHTML = ""
-    for (var year = 1950; year <= 2016; year++) {
+    for (var year = 2016; year >= 1950; year--) {
 	innerHTML += "<div class=\"item\" data-value=\"" + year + "\">Class of " + year + "</div>"
     }
     $("#alumni-dropdown").html(innerHTML)
