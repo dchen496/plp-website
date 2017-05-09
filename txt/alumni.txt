@@ -176,7 +176,6 @@ Mike Evans
 Roger Gerstenfeld
 Bernard Cohen
 Peter Levine (Deceased)
-Steven Orszag (Deceased)
 Michael Feld (Deceased)
 Michael Jablow (Deceased)
 
@@ -195,7 +194,9 @@ Adi Godrej
 Milton Lewinger
 William Dichter
 Stan Hallet
+Bart Weitz
 Joel Weingrad (Deceased)
+Steven Orszag (Deceased)
 
 Class of 1964
 Jon Gruber
@@ -219,7 +220,6 @@ Herbert Trachtenberg
 Paul Grossman
 Peter Zwick
 Craig Taitel
-Bart Weitz
 Richard Bernstein
 Peter Gutterman (Deceased)
 
@@ -351,7 +351,7 @@ Josh Geller
 Buzzy Karpay
 Robert Judem
 Ric Mishkin
-Jon Ray Packer
+Jon Durell Packer
 Craig Presson
 Rich Braun
 Doug Ross
@@ -700,7 +700,7 @@ Marcus Ottaviano
 David Lewinnek
 Scott Shrum
 Charles Sestok
-Jerrod Weisman
+Jerrod Wiesman
 Timothy Macinta
 Carlos Covarrubias
 Chris Bentzel
@@ -729,8 +729,11 @@ Jason Miller
 Gregory Harman
 Michael Perry
 Chris Resto
+Dennis Okon
 Raul Amavisca
+Bruce Chang
 Clay Harmony
+Juan Mata
 
 Class of 2000
 Max Fischer
@@ -740,11 +743,8 @@ Marc Sadler
 Ian Ross
 Eric Ferreira
 Yasuaki Amano
-Bruce Chang
 Daniel Castor
 Andrew Stein
-Dennis Okon
-Juan Mata
 Michael Salamina
 Michael Dewberry
 Paul Ojanen
