@@ -45,6 +45,7 @@ Marvin Blum (Deceased)
 
 Class of 1953
 Michael Levy
+Dick Landry
 Alan Bercow
 David Bernstein
 John Ehrenfeld
@@ -59,14 +60,15 @@ Class of 1954
 Eddy Hair
 Daniel Lister
 Eugene Brandeis
-Seymour Grossman
 Manfred Tidor
 David Borenstein
 Thomas Molnar
-Joseph Pressner
 Herbert Slater
 Gerald Jackson
+Joseph Pressner (Deceased)
+Seymour Grossman (Deceased)
 Howard Brody (Deceased)
+Bill Gleckman (Deceased)
 Bernard Gittleman (Deceased)
 
 Class of 1955
@@ -276,13 +278,13 @@ John Augenblick
 Barry Gloger
 Mark Mathis
 Alan Greenfield
-Robert Takahashi
-(now Nozomu “Yosh” Yamanaka)
 Ken Schwartz
 Charlie Kidwell
 Ed Jernigan
 Bruce Parker
 Marvin Mendelssohn
+Robert Takahashi
+(now Nozomu “Yosh” Yamanaka)
 Bill Berry
 Steve Weiner (Deceased)
 
@@ -312,7 +314,6 @@ Rick Florsheim
 Farhad Hakimzadeh
 Stuart Marson
 Barry Levine
-Steve Bernbaum
 Stewart Frost (Deceased)
 Delbert Hilgartner (Deceased)
 
@@ -329,6 +330,7 @@ Bob Tycast
 Marvin Sakakihara
 Gary Chirlin
 Dennis Fisher
+Steve Bernbaum
 Robbie Cohen
 Harry Ostrer
 Dag Horn
@@ -338,7 +340,6 @@ Henry Tucker
 
 Class of 1973
 Michael Glade
-Henry Yee
 Rick Dubrow
 Brad Warren
 Tom Gayle
@@ -360,8 +361,11 @@ Jerry Kramer (Deceased)
 
 Class of 1974
 Jeff Weinreb
+Bruce Karmel
+Bob Reynolds
 Danny Padys
 Rich Trachtman
+Henry Yee
 Larry Segil
 Wally Shjeflo
 Jay Kugler
@@ -477,6 +481,7 @@ Jon Mayo (Deceased)
 Class of 1980
 Harry Tremaine
 Arthur Kavanaugh
+Robert Ackerley
 Steven Milman
 Philip Zylberman
 David Dubbin
@@ -485,7 +490,10 @@ Richard Boland
 Andrew Edelman
 Jamie Bader
 Andrew Braunstein
-Jerome Kalmes
+Mark Alexandridas
+James Wren
+Jerome Kalmes (Deceased)
+Robert Blazquez (Deceased)
 
 Class of 1981
 Michael Barrett
