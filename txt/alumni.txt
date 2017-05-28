@@ -30,10 +30,10 @@ Harold Rich (Deceased)
 Henry Hahn (Deceased)
 
 Class of 1952
-Irwin Grossman
 Bernard Gordon
 Arthur Auer
-Philip Spiegelman
+Phillip Spiegelman
+Irwin Grossman (Deceased)
 Philip Sperling (Deceased)
 Stewart Weiss (Deceased)
 Herbert Wilf (Deceased)
@@ -758,7 +758,6 @@ Michael Dewberry
 Paul Ojanen
 Jeffrey Lamarque
 Walter Aldana
-Jeremy Hui
 
 Class of 2001
 Marco Riojas
@@ -784,7 +783,6 @@ Class of 2003
 Brett Whittemore
 Jonathan Wolk
 Abidemi Adeboje
-Murali Vajapeyam
 Reuben Sterling
 Raul Coral Pinto
 John Bloomsburgh
@@ -793,6 +791,7 @@ Class of 2004
 Kent Ross
 Jay Watt
 Dan Nunes
+Murali Vajapeyam
 Francisco Sotelo
 Christopher Taylor
 Brian Williams
