@@ -230,6 +230,7 @@ Jack Fuhrer
 Robert Silver
 Ken Estridge
 Ronald Zelazo
+Victor Fung
 Charles Davis
 James Mannos
 Terry May
@@ -532,7 +533,7 @@ George Normann
 Robert Schaefer
 Eric Grald
 Daniel Hoskins
-Brian Loofbourrow
+Bryan Loofbourrow
 Peter Gormley
 Allen Frechter
 Todd Hylton
