@@ -97,13 +97,13 @@ body {
 
 /*ugh*/
 #page-brothers-seniors .clickable-face {
-  width: 14.5%;
-  padding: .34%;
+  width: 21%;
+  padding: .4%;
 }
 
 #page-brothers-juniors .clickable-face {
-  width: 21%;
-  padding: .4%;
+  width: 16.5%;
+  padding: .34%;
 }
 
 #page-brothers-sophomores .clickable-face {
@@ -111,14 +111,9 @@ body {
   padding: .34%;
 }
 
-#page-brothers-freshmen .clickable-face {
-  width: 16.5%;
-  padding: .34%;
-}
-
 #page-brothers-graduates .clickable-face {
-  width: 22%;
-  padding: .5%;
+  width: 14.5%;
+  padding: .34%;
 }
 
 #page-alumni {
