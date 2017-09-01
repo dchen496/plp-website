@@ -6,7 +6,7 @@ var pages = [
   { name: 'location', subpages: [] },
   { name: 'rush', subpages: ['schedule'] },
   { name: 'house',  subpages: [] },
-  { name: 'brothers',  subpages: ['the-brotherhood', 'seniors', 'juniors', 'sophomores', 'freshmen', 'graduates'] },
+  { name: 'brothers',  subpages: ['the-brotherhood', 'seniors', 'juniors', 'sophomores', 'graduates'] },
   { name: 'alumni',  subpages: [] },
   { name: 'contact', subpages: [] }
 ];
@@ -66,21 +66,21 @@ $(document).ready(function() {
     window.location = '#about';
   });
 
-  
+
     $(".ui.dropdown").dropdown({
-	onChange: function (year) {
-	    setAlumni(year)
-	}
+    onChange: function (year) {
+        setAlumni(year)
+    }
     });
     initializeAlumni();
 
   $('#alumni-dropdown').on('mouseover', function() {
       if (scrollLock == null) {
-	  scrollLock = -1;
+          scrollLock = -1;
       }
   }).on('mouseout', function() {
       if (scrollLock == -1) {
-	  scrollLock = null
+          scrollLock = null;
       }
   });
 });
@@ -192,7 +192,7 @@ function readTextFile(file) {
     rawFile.onreadystatechange = function () {
         if(rawFile.readyState === 4) {
             if(rawFile.status === 200 || rawFile.status == 0) {
-		response = rawFile.responseText
+                response = rawFile.responseText
             }
         }
     }
@@ -203,14 +203,14 @@ function readTextFile(file) {
 
 function setDecade(year, lengthOfADecade) {
     $(".jimothy").html("<div class=\"alumni-year-bar content dark\"><h1>&nbsp;</h1><h2>Select a year</h2><div class=\"joel\"></div></div>")
-    
+
     var innerHTML = ""
     for (var i = year; i < year+lengthOfADecade; i++) {
-	innerHTML += "<a onclick=\"setAlumni(" + i + ")\" href=\"#alumni\"><h2><div>" + i + "</div></h2></a><br>"
+        innerHTML += "<a onclick=\"setAlumni(" + i + ")\" href=\"#alumni\"><h2><div>" + i + "</div></h2></a><br>"
     }
     $(".joel").html(innerHTML)
 }
-	
+
 
 function getAlumniNames(year) {
     var alumni_str = readTextFile("txt/alumni.txt")
@@ -225,7 +225,7 @@ function setAlumni(year) {
     var alumniNames = getAlumniNames(year)
     var innerHTML = ""
     for (var i = 0; i < alumniNames.length; i++) {
-	innerHTML += "<li>" + alumniNames[i] + "</li>"
+        innerHTML += "<li>" + alumniNames[i] + "</li>"
     }
     $(".alumni-list").html(innerHTML)
 }
@@ -233,7 +233,7 @@ function setAlumni(year) {
 function initializeAlumni() {
     var innerHTML = ""
     for (var year = 2016; year >= 1950; year--) {
-	innerHTML += "<div class=\"item\" data-value=\"" + year + "\">Class of " + year + "</div>"
+        innerHTML += "<div class=\"item\" data-value=\"" + year + "\">Class of " + year + "</div>"
     }
     $("#alumni-dropdown").html(innerHTML)
 }
