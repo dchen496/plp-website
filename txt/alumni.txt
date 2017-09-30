@@ -534,6 +534,7 @@ Robert Schaefer
 Eric Grald
 Daniel Hoskins
 Bryan Loofbourrow
+Jim Pinkerton
 Peter Gormley
 Allen Frechter
 Todd Hylton
